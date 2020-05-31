@@ -7,7 +7,7 @@ import 'package:onlinehaber/sayfalar/haberler/magazin.dart';
 import 'package:onlinehaber/sayfalar/haberler/saglik.dart';
 import 'package:onlinehaber/sayfalar/haberler/spor.dart';
 import 'package:onlinehaber/sayfalar/haberler/teknoloji.dart';
-
+import 'package:onlinehaber/sayfalar/hakkimda/hakkimda.dart';
 
 class HamburgerMenu extends StatelessWidget {
   @override
@@ -17,7 +17,7 @@ class HamburgerMenu extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height/5,
+            height: MediaQuery.of(context).size.height / 5,
             child: DrawerHeader(
               child: Center(
                 child: Text(
@@ -34,9 +34,9 @@ class HamburgerMenu extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward),
             leading: Icon(Icons.healing),
             title: Text('Covid-19 Ülkelerin Son Durumu'),
-            onTap: ()  {
-               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => Covid19()));
+            onTap: () {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => Covid19()));
             },
           ),
           ListTile(
@@ -100,6 +100,15 @@ class HamburgerMenu extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => Teknoloji()));
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward),
+            leading: Icon(Icons.account_circle),
+            title: Text('Hakkımızda'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => Hakkimda()));
             },
           ),
         ],
